@@ -1,5 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-let ele = <h2>Creating Element in App and exporting to the index file </h2>
+// let ele = <h2>Creating Element in App and exporting to the index file </h2>
 
-export default ele;
+class App extends Component{
+    render() {
+        return (React.createElement("h2", null, "This is class base demo react component"));
+    }
+}
+
+export default App;

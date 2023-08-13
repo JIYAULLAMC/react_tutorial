@@ -4,9 +4,9 @@ import Student from "./Student";
 const App = () => {
   return (
       <div>
-        <Student />
-        <Student />
-        <Student />
+        <Student name = "jiya"/>
+        <Student name = "mamtaj"/>
+        <Student name = "mohamad"/>
       </div>
   )
 }

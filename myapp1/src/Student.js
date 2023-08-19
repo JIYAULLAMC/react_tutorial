@@ -1,30 +1,14 @@
 import React from "react";
 import "./Student.css"
-// you can give html element as expression
-// const el = <h2>this is expression</h2>
-// const el = "this is expression"
 
-// you can create the mathematical expression
-// const el = 1+2+3+4
-// const el = <h2> {1+2+3+4} </h2>
+const Student = props => {
+  return (
+    <div>
+      <h4>This is function base component and example for passing the props</h4>
+      <h2>Name : {props.name} </h2>
+      <h2>Age : {props.age} </h2>
+    </div>
+  )
+}
 
-// you can create the varible expression
-// const name = "Rahul"
-// const el = <h2>Hello hi {name}</h2>
-
-//you can pass as function call in expression
-// const show = name => name + " you are good!"
-// const el = <h2>Hello hi! {show("jiyaulla")}</h2>
-
-
-//you can use object and its property
-// const person = {
-//     name : "jiyaulla",
-//     age : 24,
-// };
-
-
-// applying the css attributes in
-const el = <h2 className="bg">Hello hi!</h2>
-
-export default el;
+export default Student;

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import el from "./Student";
+import Student from "./Student";
 
 const App = () => {
   return (
       <div>
-        {el}
+        <Student name="Jiyaulla" age={24} />
       </div>
   )
 }

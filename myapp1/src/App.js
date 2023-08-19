@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import Student from "./Student";
+import el from "./Student";
 
 const App = () => {
   return (
       <div>
-        <Student name = "jiya"/>
-        <Student name = "mamtaj"/>
-        <Student name = "mohamad"/>
+        {el}
       </div>
   )
 }

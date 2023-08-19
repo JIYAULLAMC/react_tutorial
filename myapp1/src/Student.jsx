@@ -9,40 +9,32 @@ class Student extends Component{
       name : "jiyaulla", 
       roll : this.props.roll
     }
-    //binding this object inside the normal function
-    // this is because we want use the state and props assiciated with present class iside the normal fuction
-    // if we did not bind then no access to the this if do not have access then we cant access state or props of component
-    this.normalFunc = this.normalFunc.bind(this)
   } 
 
-  normalFunc() {
-    console.log("binding this object inside the normal function", this);
-    console.log("state of the component is --------- ", this.state.name, this.state.roll)
-  }
-
-  handleEvent() {
-  // regular function does not contain the definition of this object inside it
-  // but contain outside it
-    console.log("this is regular function", this);
-    console.log("name is ----",this.state.name);
-    console.log("roll ---------", this.state.roll)
-  }
-
   handleEventByArrowFunc = () => {
-    console.log("arrow func contain definition of this object", this )
-    console.log("you can see in console")
-    console.log("this represent the present boject of it")
+    console.log("this is arrow function", this )
+    // setState is used to modify the state and props
+    // this.setState({name : "Mohamad Hayat", roll : 125})  // setState take object as argument
+    // this.state.name = "Mohamad Hayat"  // this will change the attribute but react wont recognize it
+    
+    this.setState((state, props) => {  // setState take take function as argument
+      console.log("state are ", state);
+      console.log("props are : ", props);
+      return ({
+      name :"Mahmad Hayat",
+      roll : 100000
+      })
+    })
   }
   
   render() {
     return (
       <div>
-        <h4>Demonstration of Event Handling</h4>
+        <h2>Student Class Base Component</h2>
+        <h4>Demonstration of seting the state</h4>
         <h2>Name : {this.state.name} </h2>
         <h2>Roll : {this.state.roll}</h2>
-        Error indicate donot have access to this : <button onClick={this.handleEvent}>Click Me</button> <br /><br />
         <button onClick={this.handleEventByArrowFunc}>Click Me By Arrow Func</button> <br /><br />
-        Binded Normal function : <button onClick={this.normalFunc}>Binding this in normal Func</button>
       </div>
   );}
   

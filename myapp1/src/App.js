@@ -4,7 +4,7 @@ import Student from "./Student";
 const App = () => {
   return (
       <div>
-        <Student age={25} />
+        <Student roll={25} />
       </div>
   )
 }

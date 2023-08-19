@@ -3,11 +3,15 @@ import "./Student.css";
 import PropTypes  from 'prop-types';
 
 class Student extends Component{
-  state = {
-    name : "Jiyaulla",
-    age : this.props.age
+  // defining the state inside the constructor as same as previous results also same
+  constructor(props){
+    super(props)
+    this.state = {
+      name : "Jiyaulla",
+      age : this.props.age
+    }
   }
-  render() {
+    render() {
     return (
       <div>
         <h4>This is class base component and example for passing state and props</h4>

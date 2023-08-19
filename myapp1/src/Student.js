@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import "./Student.css"
+import "./Student.css";
+import PropTypes  from 'prop-types';
 
 class Student extends Component{
   render() {
@@ -11,6 +12,18 @@ class Student extends Component{
       </div>
    );
   }
+}
+
+// assinging to send proper data types props while calling the component
+Student.propTypes = {
+ // name : PropTypes.string,  // name need string type
+  name : PropTypes.string.isRequired,  // name is required positional argument if not passed will get warning error in  console
+  age : PropTypes.number,  // age need number type
+}
+
+// passing the default props to Student component 
+Student.defaultProps = {
+  name : "Guest",
 }
 
 export default Student;

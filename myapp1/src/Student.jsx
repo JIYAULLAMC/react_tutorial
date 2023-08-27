@@ -11,7 +11,7 @@ class Student extends Component{
     console.log("component constructor called -------------- student 1")
     console.log("this is props----",  props)
     this.state = {
-      name : "Jiyaulla"
+      name : "Jiyaulla" 
     }
   }
 

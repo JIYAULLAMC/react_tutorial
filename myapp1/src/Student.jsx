@@ -24,8 +24,10 @@ class Student extends Component{
     console.log("component did mount ----------------- student 4")
   }
   clickHandler = () => {
-    console.log("button clicked ")
-    this.setState({roll:102})
+    console.log("button clicked  setting the state value to new")
+    // this.setState({roll:102})
+    this.setState({roll : this.state.roll+2})
+
   }
   
   render() {

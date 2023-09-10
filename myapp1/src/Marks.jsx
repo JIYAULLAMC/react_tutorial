@@ -16,14 +16,33 @@ class Marks extends Component{
     console.log("component getderivedstatefromprops method-------------- Marks 2")
     // you can log here here what you want and you can do whatever you want
     console.log("-----------", props , state)
-    if (props.roll != state.mroll) {
-      return ({mroll : 102})
+    if (props.roll !== state.mroll) {
+      return ({mroll : props.roll })
     }
     return null
   }
 
   componentDidMount() {
     console.log("component did mount ----------------- Marks 4")
+  }
+
+  shouldComponentUpdate(nextProps, nexState){
+    // this will controll the component for rerendering or not
+    console.log("should component update", nextProps, nexState)
+    if (this.state.mroll < 107){
+      return true;
+    }
+    return false;
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState){
+    console.log("getSnapshotBeforeUpdate -------", prevProps, prevState)
+    return 200
+  }
+
+  componentDidUpdate(prevProps, PrevState, snapShot){
+    console.log("componentDidUpdate---------------", prevProps, PrevState, snapShot)
+
   }
   
   render() {

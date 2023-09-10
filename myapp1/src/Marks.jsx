@@ -44,6 +44,10 @@ class Marks extends Component{
     console.log("componentDidUpdate---------------", prevProps, PrevState, snapShot)
 
   }
+
+  componentWillUnmount(){
+    console.log("componenet will unmount  ---------------", )
+  }
   
   render() {
     console.log("component render called ------------------ Marks 3")

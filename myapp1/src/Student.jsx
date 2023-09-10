@@ -3,15 +3,14 @@ import "./Student.css";
 import Marks from "./Marks";
 
 class Student extends Component{  
-  
-  // lifecycle method Mounting
+   
+  // lifecycle method Updating
   // constructor will always call first during mounting
   constructor(props){
     super(props);
     console.log("component constructor called -------------- student 1")
-    console.log("this is props----",  props)
     this.state = {
-      name : "Jiyaulla" 
+      roll : 101 
     }
   }
 
@@ -24,14 +23,18 @@ class Student extends Component{
   componentDidMount() {
     console.log("component did mount ----------------- student 4")
   }
+  clickHandler = () => {
+    console.log("button clicked ")
+    this.setState({roll:102})
+  }
   
   render() {
     console.log("component render called ------------------ student 3")
     return (
       <div>
         <h2>Student Class Base Component</h2>
-        <h1>During lifecycle just you need to know when and which lifecycle method is calling, what you can do in it</h1>
-        <Marks name = "marks" />
+        <Marks roll={this.state.roll} />
+        <button onClick={this.clickHandler}>Change State</button>
       </div>
   );}
   

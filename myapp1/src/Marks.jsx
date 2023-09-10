@@ -6,17 +6,20 @@ class Marks extends Component{
   // constructor will always call first during mounting
   constructor(props){
     super(props);
-    console.log("component constructor called -------------- Marks 1")
-    console.log("this is props----",  props)
+    console.log("component constructor called -------------- Marks 1", this.props)
     this.state = {
-      name : "Jiyaulla"
+      mroll : this.props.roll 
     }
   }
 
   static getDerivedStateFromProps(props, state){
     console.log("component getderivedstatefromprops method-------------- Marks 2")
     // you can log here here what you want and you can do whatever you want
-    return null;
+    console.log("-----------", props , state)
+    if (props.roll != state.mroll) {
+      return ({mroll : 102})
+    }
+    return null
   }
 
   componentDidMount() {
@@ -27,8 +30,8 @@ class Marks extends Component{
     console.log("component render called ------------------ Marks 3")
     return (
       <div>
-        <h2>Marks Class Base Component</h2>
-        <h1>During lifecycle just you need to know when and which lifecycle method is calling, what you can do in it</h1>
+        <h3>Marks Class Base Component</h3>
+        <h3>Marks :{this.state.mroll} </h3>
       </div>
   );}
   

@@ -7,7 +7,7 @@ const App = () => {
       <div>
         <Student roll={25} />
         <hr />
-        <StudentFuncComp roll={123} />        
+        {/* <StudentFuncComp roll={123} />         */}
       </div>
   )
 }

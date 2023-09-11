@@ -6,19 +6,8 @@ import Guest from './Guest';
 export default class App extends Component {
   render() {
     if (this.props.isUser) {
-      return (
-        <div>
-          <h2>User </h2>
-          <User />
-        </div>
-      )
-
+      return <User />
     }
-    return(
-      <div>
-        <h2>Guest </h2>
-        <Guest />
-      </div>
-    )
+    return <Guest />
   }
 }
